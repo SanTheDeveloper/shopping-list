@@ -1,9 +1,13 @@
+<!-- ? Define the doctype and language -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- ? Set the character encoding and compatibility -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- ? Set the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ? Include the Font Awesome CSS library from a CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -11,16 +15,24 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- ? Include the custom style.css file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- ? Set the title of the webpage -->
     <title>Shopping List</title>
   </head>
   <body>
+    <!-- ? Container for the entire page -->
     <div class="container">
+      <!-- ? Page header -->
       <header>
+        <!-- ? Image for the header -->
         <img src="images/note.png" alt="" />
-        <h1>Shopping List</h1>
+        <!-- ? Title for the page -->
+        <h1 id="app-title">Shopping List</h1>
       </header>
+      <!-- ? Form for adding items -->
       <form id="item-form">
+        <!-- ? Input field for adding items -->
         <div class="form-control">
           <input
             type="text"
@@ -30,13 +42,14 @@
             placeholder="Enter Item"
           />
         </div>
+        <!-- ? Button for submitting the form -->
         <div class="form-control">
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
           </button>
         </div>
       </form>
-
+      <!-- ? Filter input for filtering items in the list -->
       <div class="filter">
         <input
           type="text"
@@ -45,8 +58,9 @@
           placeholder="Filter Items"
         />
       </div>
-
+      <!-- ? List of items -->
       <ul id="item-list" class="items">
+        <!-- ? Items will be dynamically added here -->
         <!-- <li>
           Apples
           <button class="remove-item btn-link text-red">
@@ -60,7 +74,7 @@
           </button>
         </li>
         <li>
-          Oreos
+          Bread
           <button class="remove-item btn-link text-red">
             <i class="fa-solid fa-xmark"></i>
           </button>
@@ -72,10 +86,10 @@
           </button>
         </li> -->
       </ul>
-
+      <!-- ? Button for clearing all items -->
       <button id="clear" class="btn-clear">Clear All</button>
     </div>
-
-    <script src="script.js"></script>
+    <!-- ? Include the JavaScript file -->
+    <script src="app.js"></script>
   </body>
 </html>
