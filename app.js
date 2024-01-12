@@ -22,6 +22,7 @@ function displayItems() {
 function onAddItemSubmit(event) {
   event.preventDefault();
 
+  // ? trim the input value to remove whitespace - disallowing duplicate items due to whitespace in the process
   const newItem = itemInput.value.trim();
 
   // ? Validate Input
@@ -40,7 +41,7 @@ function onAddItemSubmit(event) {
     isEditMode = false;
   } else {
     if (checkIfItemExists(newItem)) {
-      alert('That item already exists!');
+      alert(`The item "${newItem}" already exists!`);
       return;
     }
   }
